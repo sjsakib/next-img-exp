@@ -41,7 +41,7 @@
 
 .row {
   display: flex;
-  width: 100vw;
+  width: 98vw;
 }
 
 .col {
@@ -49,6 +49,10 @@
 }
 
 .my-image {
-  min-width: 100px;
+  width: 100%;
   height: auto;
+}
+
+.page2 {
+  background-image: url('../public/img1.jpg?webp');
 }

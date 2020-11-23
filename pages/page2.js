@@ -1,36 +1,32 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import image from '../public/img1.jpg?&webp&resize&sizes[]=200&sizes[]=400&sizes[]=600&sizes[]=900';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.page2}`}>
       <Head>
-        <title>next/image</title>
+        <title>next-optimized-images</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className={styles.row}>
           <div className={styles.col}>
-            <Image
-              src="https://images.unsplash.com/photo-1605940169840-953b98c0ed40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3802&q=80"
-              width={150}
-              height={150}
+            <img
+              src={image}
+              srcSet={image.srcSet}
               layout="responsive"
               className={styles['my-image']}
-              objectFit="contain"
               alt="Some unsplash image"
             />
           </div>
           <div className={styles.col}>
-            <Image
-              src="https://images.unsplash.com/photo-1605940169840-953b98c0ed40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3802&q=80"
-              width={150}
-              height={150}
+            <img
+              src={image}
+              srcSet={image.srcSet}
               layout="responsive"
               className={styles['my-image']}
-              objectFit="contain"
               alt="Some unsplash image"
             />
           </div>
